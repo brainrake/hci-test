@@ -10,8 +10,7 @@ Uniswap v2's design is the base. i.e. we have liquidity pools,
 product of liquidity pool must never decrease through a trade,
 adding to the pool gives you the geometric mean of what you added
 as liquidity pool tokens, when you withdraw you get back a portion
-of the funds corresponding to your geometric mean / the geometric mean
-of the whole pool.
+of the funds corresponding to your LP tokens / the total LP tokens.
 
 ## Throughput solution
 
