@@ -1,3 +1,10 @@
-/build
 result
 result-*
+
+/build
+
+dist/
+dist-newstyle/
+cabal.project.local*
+
+.direnv
