@@ -229,12 +229,17 @@
                 self.devShells.${system}.onchain.inputDerivation
                 self.devShells.${system}.offchain.inputDerivation
                 self.devShells.${system}.spec.inputDerivation
+                self.devShells.${system}.offchain.nativeBuildInputs
               ];
           } ''
           echo $checksss
-          touch $out
-        ''
-      );
+          export LC_CTYPE=C.UTF-8
+          export LC_ALL=C.UTF-8
+          export LANG=C.UTF-8
+          export IN_NIX_SHELL='pure'
+          make format_check lint-check
+          mkdir $out
+        '');
 
       devShells = perSystem (system: {
         onchain = self.onchain.flake.${system}.devShell;
