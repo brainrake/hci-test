@@ -121,7 +121,7 @@
               ];
               modules = [
                 ({ config, ... }: {
-                  packages.template-project-offchain.components.tests.template-project-offchain-test.build-tools = [
+                  packages.bashoswap-offchain.components.tests.bashoswap-offchain-test.build-tools = [
                     project.hsPkgs.cardano-cli.components.exes.cardano-cli
                     project.hsPkgs.cardano-node.components.exes.cardano-node
                   ];
@@ -246,5 +246,7 @@
         offchain = self.offchain.flake.${system}.devShell;
         spec = self.spec.${system}.devShell;
       });
+
+      herculesCI.ciSystems = [ "x86_64-linux" ];
     };
 }
