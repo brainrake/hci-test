@@ -1,0 +1,9 @@
+name: myproject
+version: 0.0.1
+
+custom-setup
+  setup-depends: Cabal
+
+executable myexe
+  main-is: Main.hs
+  build-depends: base
